@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
         ServiceCategory.create(service: @service, category: @category)
         format.html { redirect_to category_path(@category), notice: "#{@service.name} was successfully created." }
       else
-        flash[:error] = @serviceerrors.full_messages
+        flash[:error] = @service.errors.full_messages
         format.html { redirect_to new_category_path }
       end
     end
