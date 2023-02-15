@@ -1,12 +1,12 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all.where('user_id = ?', User.first)
+    @categories = Category.all.where('user_id = ?', current_user)
   end
 
   def show
     @category = Category.find(params[:id])
     @services = @category.all_services
-    @total_sum = @category.totalSum
+    @total_sum = @category.total_sum
   end
 
   def new
@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(category_params)
-    @category.user = User.first
+    @category.user = current_user
     respond_to do |format|
       if @category.save
         format.html { redirect_to categories_path, notice: "#{@category.name} was successfully created." }
