@@ -64,9 +64,9 @@ group :development do
   # gem "spring"
 end
 
-gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'devise'
-gem "letter_opener", group: :development
+gem 'letter_opener', group: :development
+gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
