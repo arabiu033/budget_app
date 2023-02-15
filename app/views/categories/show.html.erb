@@ -1,0 +1,10 @@
+<div class='category-name'>
+  <%= image_tag @category.icon, width: 60, height: 60 %>
+  <h2> <%= @category.name %> </h2>
+</div>
+<p><%= @category.description %>
+<hr>
+<h2>Total Payment <span> <%= "$#{'%.02f' % @totalSum}" %> </span></h2>
+<hr>
+<%= render partial: "/partials/service", collection: @services %>
+<button class='add-category'><%= link_to "Add new transaction",  new_category_service_path(@category) %></button>

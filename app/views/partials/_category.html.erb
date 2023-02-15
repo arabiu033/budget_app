@@ -1,0 +1,10 @@
+<article class='user'>
+  <%= image_tag category.icon, width: 60, height: 60 %>
+  <div class='category-name'>
+    <div>
+      <h3><%= link_to category.name, category_path(category) %></h3>
+      <span><%= "$#{'%.02f' % category.total_sum}" %></span>
+    </div>
+    <p class='num_of_posts'><%= format_date(category.updated_at) %></p>
+  </div>
+</article>

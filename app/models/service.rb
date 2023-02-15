@@ -4,5 +4,5 @@ class Service < ApplicationRecord
   has_many :categories, through: :service_categories
 
   validates :name, presence: true
-  validates :ammount, presence: true, numericality: { greater_than: 0.0 }
+  validates :amount, presence: true, numericality: { greater_than: 0.0 }
 end
