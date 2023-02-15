@@ -6,7 +6,7 @@ class ServicesController < ApplicationController
 
   def create
     @service = Service.create(service_params)
-    @service.user = User.first
+    @service.user = current_user
     respond_to do |format|
       if @service.save
         @category = Category.find(params[:category_id])

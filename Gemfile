@@ -64,6 +64,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'devise'
+gem 'letter_opener', group: :development
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :test do

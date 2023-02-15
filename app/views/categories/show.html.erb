@@ -4,7 +4,7 @@
 </div>
 <p><%= @category.description %>
 <hr>
-<h2>Total Payment <span> <%= "$#{'%.02f' % @totalSum}" %> </span></h2>
+<h2>Total Payment <span> <%= "$#{'%.02f' % @total_sum}" %> </span></h2>
 <hr>
 <%= render partial: "/partials/service", collection: @services %>
 <button class='add-category'><%= link_to "Add new transaction",  new_category_service_path(@category) %></button>
