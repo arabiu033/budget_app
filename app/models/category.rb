@@ -5,6 +5,7 @@ class Category < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true
+  validates :description, presence: true
 
   def all_services
     @services = ServiceCategory.includes(:service).where('category_id = ?', id).order(:updated_at)
