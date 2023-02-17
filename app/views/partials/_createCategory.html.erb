@@ -1,32 +1,17 @@
-<%= form_with(model: category) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
-      <ul>
-        <% category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<%= form_with(model: category, html: {class: "main-form"}) do |f| %>
+  <div class="input-form">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'First Name', required: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :icon_link %>
-    <%= form.text_field  :icon, :value => 'network.png'  %>
+  <div class="input-form">
+    <%= f.text_field :icon, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Icon Link', required: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area(:description, size: '22x4') %>
+  <div class="input-form">
+    <%= f.text_field :description, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Short Description', required: true %>
   </div>
-  
-  <div class="actions">
-    <%= form.submit %>
+
+  <div class="input-form">
+    <%= f.submit "Add", class: 'submit-info', id: 'submit-info' %>
   </div>
 <% end %>

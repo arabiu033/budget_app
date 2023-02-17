@@ -1,6 +1,12 @@
-<%= link_to 'Back', category_path(@category) %>
+<span ><%= link_to "Go back", category_path(@category), class: 'back' %></span>
+<main class="container">
+  <div class="container-one">
+    <div class="container-blue">
+      <p><span>Create a transaction</span></p>
+    </div>
+    <%= render '/partials/createService', service: @service %>
+  </div>
+</main>
 
-<h1>Add New Transaction</h1>
 
-<%= render '/partials/createService', service: @service %>
 

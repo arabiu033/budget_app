@@ -1,4 +1,9 @@
-<section class='categories'>
+<ul class='suggestions'>
+<li class="container-blue">
+  <p><span>Categories</span></p>
+</li>
   <%= render partial: "/partials/category", collection: @categories %>
-</section>
-<button class='add-category'><%= link_to "Add new category", new_category_path %></button>
+</ul>
+<div class="add-cat">
+  <%= button_to "Add new category", new_category_path, class: 'submit-info' %>
+</div>
