@@ -5,5 +5,5 @@
   <%= render partial: "/partials/category", collection: @categories %>
 </ul>
 <div class="add-cat">
-  <%= button_to "Add new category", new_category_path, class: 'submit-info' %>
+  <%= link_to "Add new category", new_category_path, class: 'submit-info' %>
 </div>

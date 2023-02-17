@@ -43,6 +43,11 @@ body {
   margin-left: 16px;
 }
 
+.photo {
+  width: 60px;
+  height: 60px;
+}
+
 @media only screen and (max-width: 801px) {
   body {
     background-image: url("bg-intro-mobile.png");

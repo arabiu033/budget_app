@@ -215,7 +215,7 @@ Devise.setup do |config|
 
   # Warn on the last attempt before the account is locked.
   # config.last_attempt_warning = true
-
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
