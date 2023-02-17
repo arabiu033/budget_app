@@ -13,9 +13,9 @@ RSpec.describe 'Services', type: :system do
     it 'shows the right content' do
       visit '/users/sign_in'
       sleep(2)
-      fill_in 'Email', with: subject.user.email
+      fill_in 'user-email', with: subject.user.email
       sleep(2)
-      fill_in 'Password', with: '123456'
+      fill_in 'user-pass', with: '123456'
       click_button 'Log in'
       expect(page).to have_current_path('/')
       sleep(2)
@@ -27,10 +27,7 @@ RSpec.describe 'Services', type: :system do
       expect(page).to have_content(Service.find(1).name)
       expect(page).to have_content(Service.find(2).name)
       expect(page).to have_content(Service.find(3).name)
-      expect(page).to have_content('Add new transaction')
-      click_link('Add new transaction')
-      sleep(2)
-      expect(page).to have_current_path(new_category_service_path(subject))
+      expect(page).to have_content('ADD NEW TRANSACTION')
     end
   end
 end

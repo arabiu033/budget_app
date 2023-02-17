@@ -14,7 +14,7 @@ a.times do
 end
 
 User.all.each do |user|
-  a = Random.rand(1..5)
+  a = Random.rand(5..8)
   a.times do
     FactoryGirl.create(:category, :user => user)
     FactoryGirl.create(:service, :user => user)
@@ -27,3 +27,5 @@ Category.all.each do |ctg|
     FactoryGirl.create(:service_category, :service => Service.all[Random.rand(0...Service.all.length)], :category => ctg)
   end
 end
+
+p User.first.email
