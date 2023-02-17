@@ -95,13 +95,13 @@ Instant Budget is a mobile web application that can helps you keep track of your
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://pocolee.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📷 Video Recording <a name="video-record"></a>
 
-- [Video Recoding me explaining the project]()
+- [Video Recoding me explaining the project](https://www.loom.com/share/294e7c26973543829208779c24397c1b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
