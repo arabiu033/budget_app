@@ -1,0 +1,10 @@
+<li>
+  <div  class='suggestions-card'>
+    <img src=<%= category.icon %>  alt="<%= category.name %> photo" class='photo'>
+    <%= link_to category_path(category), class: 'main' do %>
+      <h3><%= category.name %></h3>
+      <p class='body'><%= format_date(category.updated_at) %></p>
+    <% end %>
+    <span><%= "$#{'%.02f' % category.total_sum}" %></span>
+  </div>
+</li>

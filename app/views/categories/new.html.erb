@@ -1,0 +1,12 @@
+<span ><%= link_to "Go back", root_path, class: 'back' %></span>
+<main class="container">
+  <div class="container-one">
+    <div class="container-blue">
+      <p><span>New Category</span></p>
+    </div>
+    <%= render '/partials/createCategory', category: @category %>
+  </div>
+</main>
+
+
+

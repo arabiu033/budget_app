@@ -1,0 +1,27 @@
+<span ><%= link_to "Go back", root_path, class: 'back' %></span>
+<ul class='suggestions'>
+<li class="container-blue">
+  <p><span>Transactions</span></p>
+</li>
+  <li>
+  <div  class='suggestions-card'>
+    <%= image_tag @category.icon, width: 60, height: 60 %>
+    <div class='main'>
+      <h3><%= @category.name %></h3>
+      <p><%= @category.description %></p>
+    </div>
+  </div>
+</li>
+  <li>
+  <div  class='suggestions-card'>
+  <div></div>
+    <h2 class='main'>Total Payment: </h2>
+    <h2><span class='main'> <%= "$#{'%.02f' % @total_sum}" %> </span></h2>
+  </div>
+</li>
+<%= render partial: "/partials/service", collection: @services %>
+
+</ul>
+<div class="add-cat">
+  <%= link_to "Add new transaction",  new_category_service_path(@category), class: 'submit-info' %>
+</div>

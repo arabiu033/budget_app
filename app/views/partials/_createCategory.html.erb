@@ -1,0 +1,17 @@
+<%= form_with(model: category, html: {class: "main-form"}) do |f| %>
+  <div class="input-form">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'First Name', required: true %>
+  </div>
+
+  <div class="input-form">
+    <%= f.text_field :icon, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Icon Link', required: true %>
+  </div>
+
+  <div class="input-form">
+    <%= f.text_field :description, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Short Description', required: true %>
+  </div>
+
+  <div class="input-form">
+    <%= f.submit "Add", class: 'submit-info', id: 'submit-info' %>
+  </div>
+<% end %>

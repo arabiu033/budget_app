@@ -1,0 +1,10 @@
+<li>
+  <div  class='suggestions-card'>
+  <div></div>
+  <div class='main'>
+  <h4>Transaction <%= service.service.name %></h4>
+  <p class='num_of_posts'><%= format_date(service.service.updated_at) %></p>
+</div>
+  <h4><span class='main'> <%= "$#{'%.02f' % service.service.amount}" %> </span></h4>
+  </div>
+</li>

@@ -1,0 +1,33 @@
+<main class="container">
+      <div class="container-one">
+        <h1>Pocolee</h1>
+        <p>
+          Greetings, buddy. Keep track of your spendings in a fashioned way.
+        </p>
+      </div>
+      <div class="container-two">
+        <div class="container-blue">
+          <p><span>Enter your details</span></p>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "main-form"}) do |f| %>
+
+          <div class="input-form">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'user-email', id: 'user-email', placeholder: 'Email Address', required: true %>
+          </div>
+
+          <div class="input-form">
+            <%= f.password_field :password, autocomplete: "new-password", class: 'user-pass', id: 'user-pass', placeholder: 'Password', required: true %>
+          </div>
+
+          <div class="input-form">
+            <%= f.submit "Log in", class: 'submit-info', id: 'submit-info' %>
+          </div>
+
+          <label class="btn-term" for="submit-info">
+            <%= render "devise/shared/links" %>
+          </label>
+        <% end %>
+      </div>
+    </main>
+

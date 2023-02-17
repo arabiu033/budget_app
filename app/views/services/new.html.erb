@@ -1,0 +1,12 @@
+<span ><%= link_to "Go back", category_path(@category), class: 'back' %></span>
+<main class="container">
+  <div class="container-one">
+    <div class="container-blue">
+      <p><span>Create a transaction</span></p>
+    </div>
+    <%= render '/partials/createService', service: @service %>
+  </div>
+</main>
+
+
+
