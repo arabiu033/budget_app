@@ -67,6 +67,7 @@ end
 gem 'devise'
 gem 'letter_opener', group: :development
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'validate_url'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
