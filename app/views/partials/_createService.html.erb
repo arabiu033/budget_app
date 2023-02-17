@@ -1,5 +1,6 @@
-<%= form_with(model: service, url:  category_services_path(@category)) do |form| %>
-  <% if service.errors.any? %>
+<%= form_with(model: service, url:  category_services_path(@category), html: {class: "main-form"}) do |f| %>
+  <label class="btn-term" for="submit-info">
+    <% if service.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(service.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
@@ -10,18 +11,16 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  </label>
+  <div class="input-form">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Transaction Name', required: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field  :amount %>
+  <div class="input-form">
+    <%= f.text_field :amount, autofocus: true, autocomplete: "name", class: 'first-name', id: 'first-name', placeholder: 'Amount', required: true %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="input-form">
+    <%= f.submit "Create", class: 'submit-info', id: 'submit-info' %>
   </div>
 <% end %>
